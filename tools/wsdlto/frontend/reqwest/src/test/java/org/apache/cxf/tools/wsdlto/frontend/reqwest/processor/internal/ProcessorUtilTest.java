@@ -17,9 +17,7 @@
  * under the License.
  */
 
-package org.apache.cxf.tools.wsdlto.frontend.jaxws.processor.internal;
-
-import org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.internal.ProcessorUtil;
+package org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.internal;
 
 import org.junit.Test;
 

@@ -17,7 +17,7 @@
  * under the License.
  */
 
-package org.apache.cxf.tools.wsdlto.frontend.jaxws.processor.internal.mapper;
+package org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.internal.mapper;
 
 import javax.wsdl.OperationType;
 import javax.xml.namespace.QName;
@@ -25,7 +25,6 @@ import javax.xml.namespace.QName;
 import org.apache.cxf.service.model.MessageInfo;
 import org.apache.cxf.service.model.OperationInfo;
 import org.apache.cxf.tools.common.model.JavaMethod;
-import org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.internal.mapper.MethodMapper;
 
 import org.junit.Test;
 

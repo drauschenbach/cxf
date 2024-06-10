@@ -17,7 +17,7 @@
  * under the License.
  */
 
-package org.apache.cxf.tools.wsdlto.frontend.jaxws.wsdl11;
+package org.apache.cxf.tools.wsdlto.frontend.reqwest.wsdl11;
 
 import java.io.File;
 import java.util.Iterator;
@@ -33,7 +33,6 @@ import org.apache.cxf.BusFactory;
 import org.apache.cxf.tools.common.ToolConstants;
 import org.apache.cxf.tools.common.ToolContext;
 import org.apache.cxf.tools.wsdlto.frontend.reqwest.customization.JAXWSBinding;
-import org.apache.cxf.tools.wsdlto.frontend.reqwest.wsdl11.JAXWSDefinitionBuilder;
 
 import org.junit.Before;
 import org.junit.Test;

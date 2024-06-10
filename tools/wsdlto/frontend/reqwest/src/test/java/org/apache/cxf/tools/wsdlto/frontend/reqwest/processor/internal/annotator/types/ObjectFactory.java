@@ -17,14 +17,8 @@
  * under the License.
  */
 
-package org.apache.cxf.tools.wsdlto.frontend.jaxws.processor.internal;
+package org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.internal.annotator.types;
 
-import org.junit.Test;
-
-
-public class PortTypeProcessorTest {
-
-    @Test
-    public void testProcess() throws Exception {
-    }
+public class ObjectFactory {
+    // a dummy ObjectFactory class
 }

@@ -17,14 +17,13 @@
  * under the License.
  */
 
-package org.apache.cxf.tools.wsdlto.frontend.jaxws.processor.internal.annotator;
+package org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.internal.annotator;
 
 import java.util.Iterator;
 
 import org.apache.cxf.tools.common.model.JavaInterface;
 import org.apache.cxf.tools.util.ClassCollector;
-import org.apache.cxf.tools.wsdlto.frontend.jaxws.processor.internal.annotator.types.ObjectFactory;
-import org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.internal.annotator.XmlSeeAlsoAnnotator;
+import org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.internal.annotator.types.ObjectFactory;
 
 import org.junit.Test;
 

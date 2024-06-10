@@ -17,8 +17,8 @@
  * under the License.
  */
 
-package org.apache.cxf.tools.wsdlto.frontend.jaxws.processor.internal.annotator.types;
+package org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.internal.annotator.types;
 
-public class ObjectFactory {
-    // a dummy ObjectFactory class
+public class A {
+    // a dummy type class
 }

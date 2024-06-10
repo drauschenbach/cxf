@@ -17,7 +17,7 @@
  * under the License.
  */
 
-package org.apache.cxf.tools.wsdlto.frontend.jaxws.processor.internal.annotator;
+package org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.internal.annotator;
 
 import java.util.List;
 import java.util.Map;
@@ -25,8 +25,6 @@ import java.util.Map;
 import org.apache.cxf.tools.common.model.JAnnotation;
 import org.apache.cxf.tools.common.model.JAnnotationElement;
 import org.apache.cxf.tools.common.model.JavaMethod;
-import org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.internal.annotator.WebMethodAnnotator;
-import org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.internal.annotator.WebResultAnnotator;
 
 import org.junit.Test;
 

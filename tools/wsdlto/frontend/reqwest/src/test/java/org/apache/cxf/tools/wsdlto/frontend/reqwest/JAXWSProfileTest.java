@@ -17,7 +17,7 @@
  * under the License.
  */
 
-package org.apache.cxf.tools.wsdlto.frontend.jaxws;
+package org.apache.cxf.tools.wsdlto.frontend.reqwest;
 
 import java.util.List;
 import java.util.Map;
@@ -30,7 +30,6 @@ import org.apache.cxf.tools.plugin.Plugin;
 import org.apache.cxf.tools.wsdlto.core.AbstractWSDLBuilder;
 import org.apache.cxf.tools.wsdlto.core.FrontEndProfile;
 import org.apache.cxf.tools.wsdlto.core.PluginLoader;
-import org.apache.cxf.tools.wsdlto.frontend.reqwest.JAXWSContainer;
 import org.apache.cxf.tools.wsdlto.frontend.reqwest.generators.AntGenerator;
 import org.apache.cxf.tools.wsdlto.frontend.reqwest.generators.ImplGenerator;
 import org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.WSDLToJavaProcessor;

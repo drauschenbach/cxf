@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package org.apache.cxf.tools.wsdlto.frontend.jaxws.customization;
+package org.apache.cxf.tools.wsdlto.frontend.reqwest.customization;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -27,8 +27,6 @@ import org.w3c.dom.Node;
 
 import org.apache.cxf.staxutils.StaxUtils;
 import org.apache.cxf.tools.common.ProcessorTestBase;
-import org.apache.cxf.tools.wsdlto.frontend.reqwest.customization.CustomNodeSelector;
-import org.apache.cxf.tools.wsdlto.frontend.reqwest.customization.CustomizationParser;
 
 import org.junit.Test;
 

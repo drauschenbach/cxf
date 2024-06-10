@@ -17,7 +17,7 @@
  * under the License.
  */
 
-package org.apache.cxf.tools.wsdlto.frontend.jaxws.processor.internal.annotator;
+package org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.internal.annotator;
 
 import java.util.List;
 
@@ -28,7 +28,6 @@ import org.apache.cxf.tools.common.model.JAnnotation;
 import org.apache.cxf.tools.common.model.JAnnotationElement;
 import org.apache.cxf.tools.common.model.JavaMethod;
 import org.apache.cxf.tools.common.model.JavaParameter;
-import org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.internal.annotator.WebParamAnnotator;
 
 import org.junit.Before;
 import org.junit.Test;
