@@ -23,6 +23,7 @@ import org.apache.cxf.tools.common.ToolContext;
 import org.apache.cxf.tools.common.model.JavaMethod;
 import org.apache.cxf.tools.common.model.JavaParameter;
 import org.apache.cxf.tools.common.model.JavaType;
+import org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.internal.ParameterProcessor;
 
 import org.junit.Test;
 

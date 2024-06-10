@@ -18,14 +18,14 @@ specific language governing permissions and limitations
 under the License.
 -->
 <plugin xmlns="http://cxf.apache.org/tools/plugin" name="tools-jaxws-frontend" version="2.0" provider="apache cxf">
-    <frontend name="jaxws" package="org.apache.cxf.tools.wsdlto.frontend.jaxws" profile="JAXWSProfile">
+    <frontend name="jaxws" package="org.apache.cxf.tools.wsdlto.frontend.reqwest" profile="JAXWSProfile">
         <container name="JAXWSContainer" toolspec="jaxws-toolspec.xml"/>
-        <processor name="WSDLToJavaProcessor" package="org.apache.cxf.tools.wsdlto.frontend.jaxws.processor"/>
-        <builder name="JAXWSDefinitionBuilder" package="org.apache.cxf.tools.wsdlto.frontend.jaxws.wsdl11"/>
-        <generators package="org.apache.cxf.tools.wsdlto.frontend.jaxws.generators">
+        <processor name="WSDLToJavaProcessor" package="org.apache.cxf.tools.wsdlto.frontend.reqwest.processor"/>
+        <builder name="JAXWSDefinitionBuilder" package="org.apache.cxf.tools.wsdlto.frontend.reqwest.wsdl11"/>
+        <generators package="org.apache.cxf.tools.wsdlto.frontend.reqwest.generators">
             <generator name="AntGenerator"/>
             <generator name="ImplGenerator"/>
         </generators>
     </frontend>
-    <databinding name="jaxb" package="org.apache.cxf.tools.wsdlto.frontend.jaxws" profile="DummyDataBinding"/>
+    <databinding name="jaxb" package="org.apache.cxf.tools.wsdlto.frontend.reqwest" profile="DummyDataBinding"/>
 </plugin>

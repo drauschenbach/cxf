@@ -27,6 +27,8 @@ import org.w3c.dom.Node;
 
 import org.apache.cxf.staxutils.StaxUtils;
 import org.apache.cxf.tools.common.ProcessorTestBase;
+import org.apache.cxf.tools.wsdlto.frontend.reqwest.customization.CustomNodeSelector;
+import org.apache.cxf.tools.wsdlto.frontend.reqwest.customization.CustomizationParser;
 
 import org.junit.Test;
 

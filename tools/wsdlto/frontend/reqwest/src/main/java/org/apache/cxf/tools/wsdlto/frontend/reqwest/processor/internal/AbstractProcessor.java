@@ -17,34 +17,18 @@
  * under the License.
  */
 
-package org.apache.cxf.tools.wsdlto.frontend.jaxws.processor.internal;
+package org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.internal;
 
-import org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.internal.ProcessorUtil;
+import java.util.logging.Logger;
 
-import org.junit.Test;
+import org.apache.cxf.common.logging.LogUtils;
+import org.apache.cxf.tools.common.ToolContext;
 
-import static org.junit.Assert.assertEquals;
+public abstract class AbstractProcessor {
+    protected static final Logger LOG = LogUtils.getL7dLogger(AbstractProcessor.class);
+    protected ToolContext context;
 
-
-
-public class ProcessorUtilTest {
-
-    private boolean isWindows() {
-        return System.getProperty("os.name").contains("Windows");
-    }
-
-    @Test
-    public void testGetAbsolutePath() throws Exception {
-        assertEquals("http://cxf.org",
-                     ProcessorUtil.getAbsolutePath("http://cxf.org"));
-
-        if (isWindows()) {
-
-            assertEquals("c:/org/cxf",
-                         ProcessorUtil.getAbsolutePath("c:\\org\\cxf"));
-
-            assertEquals("c:/org/cxf",
-                         ProcessorUtil.getAbsolutePath("c:/org/cxf"));
-        }
+    public AbstractProcessor(ToolContext c) {
+        this.context = c;
     }
 }

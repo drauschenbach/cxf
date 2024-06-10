@@ -17,34 +17,23 @@
  * under the License.
  */
 
-package org.apache.cxf.tools.wsdlto.frontend.jaxws.processor.internal;
-
-import org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.internal.ProcessorUtil;
-
-import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
+package org.apache.cxf.tools.wsdlto.frontend.reqwest;
 
 
+import org.apache.cxf.tools.common.toolspec.ToolSpec;
 
-public class ProcessorUtilTest {
-
-    private boolean isWindows() {
-        return System.getProperty("os.name").contains("Windows");
+/**
+ *
+ */
+public class CXFJAXWSContainer extends JAXWSContainer {
+    public CXFJAXWSContainer(ToolSpec toolspec) throws Exception {
+        super(toolspec);
+    }
+    public String getServiceSuperclass() {
+        return "org.apache.cxf.jaxws.CXFService";
     }
 
-    @Test
-    public void testGetAbsolutePath() throws Exception {
-        assertEquals("http://cxf.org",
-                     ProcessorUtil.getAbsolutePath("http://cxf.org"));
-
-        if (isWindows()) {
-
-            assertEquals("c:/org/cxf",
-                         ProcessorUtil.getAbsolutePath("c:\\org\\cxf"));
-
-            assertEquals("c:/org/cxf",
-                         ProcessorUtil.getAbsolutePath("c:/org/cxf"));
-        }
+    public String getServiceTarget() {
+        return "cxf";
     }
 }

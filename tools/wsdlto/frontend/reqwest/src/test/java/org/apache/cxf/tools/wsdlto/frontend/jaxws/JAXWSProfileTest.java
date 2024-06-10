@@ -30,10 +30,11 @@ import org.apache.cxf.tools.plugin.Plugin;
 import org.apache.cxf.tools.wsdlto.core.AbstractWSDLBuilder;
 import org.apache.cxf.tools.wsdlto.core.FrontEndProfile;
 import org.apache.cxf.tools.wsdlto.core.PluginLoader;
-import org.apache.cxf.tools.wsdlto.frontend.jaxws.generators.AntGenerator;
-import org.apache.cxf.tools.wsdlto.frontend.jaxws.generators.ImplGenerator;
-import org.apache.cxf.tools.wsdlto.frontend.jaxws.processor.WSDLToJavaProcessor;
-import org.apache.cxf.tools.wsdlto.frontend.jaxws.wsdl11.JAXWSDefinitionBuilder;
+import org.apache.cxf.tools.wsdlto.frontend.reqwest.JAXWSContainer;
+import org.apache.cxf.tools.wsdlto.frontend.reqwest.generators.AntGenerator;
+import org.apache.cxf.tools.wsdlto.frontend.reqwest.generators.ImplGenerator;
+import org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.WSDLToJavaProcessor;
+import org.apache.cxf.tools.wsdlto.frontend.reqwest.wsdl11.JAXWSDefinitionBuilder;
 
 import org.junit.Test;
 

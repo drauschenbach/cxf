@@ -16,35 +16,33 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+package org.apache.cxf.tools.wsdlto.frontend.reqwest.customization;
 
-package org.apache.cxf.tools.wsdlto.frontend.jaxws.processor.internal;
+public class JAXWSClass {
+    private String className;
+    private String comments;
 
-import org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.internal.ProcessorUtil;
-
-import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
-
-
-
-public class ProcessorUtilTest {
-
-    private boolean isWindows() {
-        return System.getProperty("os.name").contains("Windows");
+    public JAXWSClass(String clzName, String comment) {
+        className = clzName;
+        comments = comment;
     }
 
-    @Test
-    public void testGetAbsolutePath() throws Exception {
-        assertEquals("http://cxf.org",
-                     ProcessorUtil.getAbsolutePath("http://cxf.org"));
-
-        if (isWindows()) {
-
-            assertEquals("c:/org/cxf",
-                         ProcessorUtil.getAbsolutePath("c:\\org\\cxf"));
-
-            assertEquals("c:/org/cxf",
-                         ProcessorUtil.getAbsolutePath("c:/org/cxf"));
-        }
+    public void setClassName(String clzName) {
+        this.className = clzName;
     }
+
+    public String getClassName() {
+        return className;
+    }
+
+    public void setComments(String comment) {
+        comments = comment;
+    }
+
+    public String getComments() {
+        return comments;
+    }
+
+
+
 }
