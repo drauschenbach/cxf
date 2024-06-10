@@ -25,8 +25,8 @@ import org.apache.cxf.tools.common.toolspec.ToolSpec;
 /**
  *
  */
-public class CXFJAXWSContainer extends JAXWSContainer {
-    public CXFJAXWSContainer(ToolSpec toolspec) throws Exception {
+public class CXFReqwestContainer extends ReqwestContainer {
+    public CXFReqwestContainer(ToolSpec toolspec) throws Exception {
         super(toolspec);
     }
     public String getServiceSuperclass() {

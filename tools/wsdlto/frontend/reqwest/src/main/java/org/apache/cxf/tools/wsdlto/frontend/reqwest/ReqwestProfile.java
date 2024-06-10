@@ -22,6 +22,6 @@ package org.apache.cxf.tools.wsdlto.frontend.reqwest;
 import org.apache.cxf.tools.wsdlto.core.FrontEndProfile;
 //import org.apache.cxf.tools.wsdlto.core.FrontEndGenerator;
 
-public class JAXWSProfile extends FrontEndProfile {
+public class ReqwestProfile extends FrontEndProfile {
 
 }

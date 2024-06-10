@@ -41,25 +41,25 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
-public class JAXWSProfileTest {
+public class ReqwestProfileTest {
 
     @Test
     public void testLoadPlugins() {
         PluginLoader loader = PluginLoader.getInstance();
         assertNotNull(loader);
 
-        loader.loadPlugin("/org/apache/cxf/tools/wsdlto/frontend/jaxws/jaxws-plugin.xml");
+        loader.loadPlugin("/org/apache/cxf/tools/wsdlto/frontend/reqwest/reqwest-plugin.xml");
 
         assertEquals(3, loader.getPlugins().size());
 
         Plugin plugin = null;
         for (Plugin p : loader.getPlugins().values()) {
-            if (p.getName().contains("jaxws")) {
+            if (p.getName().contains("reqwest")) {
                 plugin = p;
             }
         }
         assertNotNull(plugin);
-        assertEquals("tools-jaxws-frontend", plugin.getName());
+        assertEquals("tools-reqwest-frontend", plugin.getName());
         assertEquals("2.0", plugin.getVersion());
         assertEquals("apache cxf", plugin.getProvider());
 
@@ -68,16 +68,16 @@ public class JAXWSProfileTest {
         assertEquals(2, frontends.size());
 
         FrontEnd frontend = getFrontEnd(frontends, 0);
-        assertEquals("jaxws", frontend.getName());
-        assertEquals("org.apache.cxf.tools.wsdlto.frontend.jaxws", frontend.getPackage());
-        assertEquals("JAXWSProfile", frontend.getProfile());
+        assertEquals("reqwest", frontend.getName());
+        assertEquals("org.apache.cxf.tools.wsdlto.frontend.reqwest", frontend.getPackage());
+        assertEquals("ReqwestProfile", frontend.getProfile());
         assertNotNull(frontend.getGenerators());
         assertNotNull(frontend.getGenerators().getGenerator());
         assertEquals(2, frontend.getGenerators().getGenerator().size());
         assertEquals("AntGenerator", getGenerator(frontend, 0).getName());
         assertEquals("ImplGenerator", getGenerator(frontend, 1).getName());
 
-        FrontEndProfile profile = loader.getFrontEndProfile("jaxws");
+        FrontEndProfile profile = loader.getFrontEndProfile("reqwest");
         assertNotNull(profile);
         List<FrontEndGenerator> generators = profile.getGenerators();
         assertNotNull(generators);
@@ -93,8 +93,8 @@ public class JAXWSProfileTest {
         assertTrue(builder instanceof JAXWSDefinitionBuilder);
 
         Class<?> container = profile.getContainerClass();
-        assertEquals(container, JAXWSContainer.class);
-        assertEquals("/org/apache/cxf/tools/wsdlto/frontend/jaxws/jaxws-toolspec.xml", profile.getToolspec());
+        assertEquals(container, ReqwestContainer.class);
+        assertEquals("/org/apache/cxf/tools/wsdlto/frontend/reqwest/reqwest-toolspec.xml", profile.getToolspec());
     }
 
     protected Generator getGenerator(FrontEnd frontend, int index) {

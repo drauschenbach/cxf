@@ -32,13 +32,13 @@ import org.apache.cxf.tools.common.ToolConstants;
 import org.apache.cxf.tools.common.ToolContext;
 import org.apache.cxf.tools.common.ToolException;
 import org.apache.cxf.tools.common.toolspec.ToolSpec;
-import org.apache.cxf.tools.wsdlto.WSDLToJavaContainer;
+import org.apache.cxf.tools.wsdlto.WSDLToRustContainer;
 
-public class JAXWSContainer extends WSDLToJavaContainer {
+public class ReqwestContainer extends WSDLToRustContainer {
 
     private static final String TOOL_NAME = "wsdl2java";
 
-    public JAXWSContainer(ToolSpec toolspec) throws Exception {
+    public ReqwestContainer(ToolSpec toolspec) throws Exception {
         super(TOOL_NAME, toolspec);
     }
 
