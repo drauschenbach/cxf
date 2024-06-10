@@ -18,10 +18,10 @@ specific language governing permissions and limitations
 under the License.
 -->
 <plugin xmlns="http://cxf.apache.org/tools/plugin" name="jaxws" version="" provider="cxf.apache.org">
-    <frontend name="reqwest" package="org.apache.cxf.tools.wsdlto.frontend.reqwest" profile="JAXWSProfile">
-        <container name="JAXWSContainer" toolspec="jaxws-toolspec.xml"/>
+    <frontend name="reqwest" package="org.apache.cxf.tools.wsdlto.frontend.reqwest" profile="ReqwestProfile">
+        <container name="ReqwestContainer" toolspec="jaxws-toolspec.xml"/>
         <processor name="WSDLToJavaProcessor" package="org.apache.cxf.tools.wsdlto.frontend.reqwest.processor"/>
-        <builder name="JAXWSDefinitionBuilder" package="org.apache.cxf.tools.wsdlto.frontend.reqwest.wsdl11"/>
+        <builder name="ReqwestDefinitionBuilder" package="org.apache.cxf.tools.wsdlto.frontend.reqwest.wsdl11"/>
         <generators package="org.apache.cxf.tools.wsdlto.frontend.reqwest.generators">
             <generator name="AntGenerator"/>
             <generator name="ClientGenerator"/>
