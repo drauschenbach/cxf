@@ -21,9 +21,9 @@
     <annotation>
 Examples:
 
-        wsdl2java HelloWorld.wsdl
-        wsdl2java -p com.iona.greeting Greeting.wsdl
-        wsdl2java -client HelloWorld.wsdl
+        wsdl2rust HelloWorld.wsdl
+        wsdl2rust -p com.iona.greeting Greeting.wsdl
+        wsdl2rust -client HelloWorld.wsdl
     </annotation>
     <usage>
         <optionGroup id="options">
@@ -70,7 +70,7 @@ Examples:
             </option>
             <option id="servicename">
                 <annotation>
-                    Specify he WSDL service name to use for the generated code.
+                    Specify the WSDL service name to use for the generated code.
                     Also, optionally specify the WSDL namespace.
                 </annotation>
                 <switch>sn</switch>

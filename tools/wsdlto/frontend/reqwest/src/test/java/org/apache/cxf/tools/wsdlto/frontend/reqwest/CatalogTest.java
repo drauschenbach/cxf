@@ -37,7 +37,7 @@ public class CatalogTest {
     public void testCatalog() throws Exception {
         OASISCatalogManager catalogManager = new OASISCatalogManager();
 
-        URL jaxwscatalog = getClass().getResource("/META-INF/jax-ws-catalog.xml");
+        URL jaxwscatalog = getClass().getResource("/META-INF/reqwest-catalog.xml");
         assertNotNull(jaxwscatalog);
 
         catalogManager.loadCatalog(jaxwscatalog);
