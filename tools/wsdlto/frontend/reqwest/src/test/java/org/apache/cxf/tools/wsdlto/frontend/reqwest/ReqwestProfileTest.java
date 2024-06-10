@@ -32,8 +32,8 @@ import org.apache.cxf.tools.wsdlto.core.FrontEndProfile;
 import org.apache.cxf.tools.wsdlto.core.PluginLoader;
 import org.apache.cxf.tools.wsdlto.frontend.reqwest.generators.AntGenerator;
 import org.apache.cxf.tools.wsdlto.frontend.reqwest.generators.ImplGenerator;
-import org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.WSDLToJavaProcessor;
-import org.apache.cxf.tools.wsdlto.frontend.reqwest.wsdl11.JAXWSDefinitionBuilder;
+import org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.WSDLToRustProcessor;
+import org.apache.cxf.tools.wsdlto.frontend.reqwest.wsdl11.ReqwestDefinitionBuilder;
 
 import org.junit.Test;
 
@@ -65,7 +65,7 @@ public class ReqwestProfileTest {
 
         Map<String, FrontEnd> frontends = loader.getFrontEnds();
         assertNotNull(frontends);
-        assertEquals(2, frontends.size());
+        assertEquals(1, frontends.size());
 
         FrontEnd frontend = getFrontEnd(frontends, 0);
         assertEquals("reqwest", frontend.getName());
@@ -86,11 +86,11 @@ public class ReqwestProfileTest {
         assertTrue(generators.get(1) instanceof ImplGenerator);
         Processor processor = profile.getProcessor();
         assertNotNull(processor);
-        assertTrue(processor instanceof WSDLToJavaProcessor);
+        assertTrue(processor instanceof WSDLToRustProcessor);
 
         AbstractWSDLBuilder builder = profile.getWSDLBuilder();
         assertNotNull(builder);
-        assertTrue(builder instanceof JAXWSDefinitionBuilder);
+        assertTrue(builder instanceof ReqwestDefinitionBuilder);
 
         Class<?> container = profile.getContainerClass();
         assertEquals(container, ReqwestContainer.class);

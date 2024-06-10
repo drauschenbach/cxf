@@ -35,7 +35,7 @@ import org.apache.cxf.tools.common.model.JavaPort;
 import org.apache.cxf.tools.common.model.JavaServiceClass;
 import org.apache.cxf.tools.util.ClassCollector;
 import org.apache.cxf.tools.util.NameUtil;
-import org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.WSDLToJavaProcessor;
+import org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.WSDLToRustProcessor;
 
 public class ClientGenerator extends AbstractJAXWSGenerator {
 
@@ -55,7 +55,7 @@ public class ClientGenerator extends AbstractJAXWSGenerator {
         if (passthrough()) {
             return;
         }
-        Map<QName, JavaModel> map = CastUtils.cast((Map<?, ?>)penv.get(WSDLToJavaProcessor.MODEL_MAP));
+        Map<QName, JavaModel> map = CastUtils.cast((Map<?, ?>)penv.get(WSDLToRustProcessor.MODEL_MAP));
         for (JavaModel javaModel : map.values()) {
 
             if (javaModel.getServiceClasses().isEmpty()) {

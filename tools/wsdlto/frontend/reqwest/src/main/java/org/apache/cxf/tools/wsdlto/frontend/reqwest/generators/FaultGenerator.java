@@ -33,7 +33,7 @@ import org.apache.cxf.tools.common.model.JavaExceptionClass;
 import org.apache.cxf.tools.common.model.JavaField;
 import org.apache.cxf.tools.common.model.JavaModel;
 import org.apache.cxf.tools.util.ClassCollector;
-import org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.WSDLToJavaProcessor;
+import org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.WSDLToRustProcessor;
 import org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.internal.ProcessorUtil;
 
 public class FaultGenerator extends AbstractJAXWSGenerator {
@@ -64,7 +64,7 @@ public class FaultGenerator extends AbstractJAXWSGenerator {
         if (passthrough()) {
             return;
         }
-        Map<QName, JavaModel> map = CastUtils.cast((Map<?, ?>)penv.get(WSDLToJavaProcessor.MODEL_MAP));
+        Map<QName, JavaModel> map = CastUtils.cast((Map<?, ?>)penv.get(WSDLToRustProcessor.MODEL_MAP));
         for (JavaModel javaModel : map.values()) {
 
             Map<String, JavaExceptionClass> exceptionClasses = javaModel

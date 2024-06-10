@@ -36,7 +36,7 @@ import org.apache.cxf.tools.wsdlto.WSDLToRustContainer;
 
 public class ReqwestContainer extends WSDLToRustContainer {
 
-    private static final String TOOL_NAME = "wsdl2java";
+    private static final String TOOL_NAME = "wsdl2rust";
 
     public ReqwestContainer(ToolSpec toolspec) throws Exception {
         super(TOOL_NAME, toolspec);

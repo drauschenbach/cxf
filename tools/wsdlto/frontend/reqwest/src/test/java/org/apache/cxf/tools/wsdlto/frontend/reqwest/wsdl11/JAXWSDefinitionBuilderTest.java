@@ -52,7 +52,7 @@ public class JAXWSDefinitionBuilderTest {
     public void testCustomization() {
         env.put(ToolConstants.CFG_WSDLURL, getClass().getResource("resources/hello_world.wsdl").toString());
         env.put(ToolConstants.CFG_BINDING, getClass().getResource("resources/binding2.xml").toString());
-        JAXWSDefinitionBuilder builder = new JAXWSDefinitionBuilder();
+        ReqwestDefinitionBuilder builder = new ReqwestDefinitionBuilder();
         builder.setContext(env);
         builder.setBus(BusFactory.getDefaultBus());
         builder.build();
@@ -100,7 +100,7 @@ public class JAXWSDefinitionBuilderTest {
     public void testCustomizationWithDifferentNS() {
         env.put(ToolConstants.CFG_WSDLURL, getClass().getResource("resources/hello_world.wsdl").toString());
         env.put(ToolConstants.CFG_BINDING, getClass().getResource("resources/binding3.xml").toString());
-        JAXWSDefinitionBuilder builder = new JAXWSDefinitionBuilder();
+        ReqwestDefinitionBuilder builder = new ReqwestDefinitionBuilder();
         builder.setContext(env);
         builder.setBus(BusFactory.getDefaultBus());
         builder.build();
@@ -154,7 +154,7 @@ public class JAXWSDefinitionBuilderTest {
         env.put(ToolConstants.CFG_BINDING,
             getClass().getResource("resources/cxf556_binding.xml").toString());
 
-        JAXWSDefinitionBuilder builder = new JAXWSDefinitionBuilder();
+        ReqwestDefinitionBuilder builder = new ReqwestDefinitionBuilder();
         builder.setContext(env);
         builder.setBus(BusFactory.getDefaultBus());
         builder.build();
@@ -167,7 +167,7 @@ public class JAXWSDefinitionBuilderTest {
     public void testNoService() {
         env.put(ToolConstants.CFG_WSDLURL, getClass().getResource("resources/build.wsdl").toString());
 
-        JAXWSDefinitionBuilder builder = new JAXWSDefinitionBuilder();
+        ReqwestDefinitionBuilder builder = new ReqwestDefinitionBuilder();
         builder.setContext(env);
         builder.setBus(BusFactory.getDefaultBus());
         builder.build();

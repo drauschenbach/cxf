@@ -58,9 +58,9 @@ import org.apache.cxf.tools.wsdlto.frontend.reqwest.customization.JAXWSBindingDe
 import org.apache.cxf.tools.wsdlto.frontend.reqwest.customization.JAXWSBindingSerializer;
 import org.apache.cxf.wsdl.WSDLManager;
 
-public class JAXWSDefinitionBuilder extends AbstractWSDLBuilder {
+public class ReqwestDefinitionBuilder extends AbstractWSDLBuilder {
 
-    protected static final Logger LOG = LogUtils.getL7dLogger(JAXWSDefinitionBuilder.class);
+    protected static final Logger LOG = LogUtils.getL7dLogger(ReqwestDefinitionBuilder.class);
     protected CustomizationParser cusParser;
 
     private Definition wsdlDefinition;
@@ -68,7 +68,7 @@ public class JAXWSDefinitionBuilder extends AbstractWSDLBuilder {
     private List<InputSource> jaxbBindings;
     private Element handlerChain;
 
-    public JAXWSDefinitionBuilder() {
+    public ReqwestDefinitionBuilder() {
     }
 
     public Definition build() {

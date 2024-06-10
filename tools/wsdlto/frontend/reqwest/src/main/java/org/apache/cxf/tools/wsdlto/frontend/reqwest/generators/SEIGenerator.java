@@ -37,7 +37,7 @@ import org.apache.cxf.tools.common.model.JAnnotationElement;
 import org.apache.cxf.tools.common.model.JavaInterface;
 import org.apache.cxf.tools.common.model.JavaModel;
 import org.apache.cxf.tools.util.ClassCollector;
-import org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.WSDLToJavaProcessor;
+import org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.WSDLToRustProcessor;
 
 public class SEIGenerator extends AbstractJAXWSGenerator {
 
@@ -68,7 +68,7 @@ public class SEIGenerator extends AbstractJAXWSGenerator {
             return;
         }
 
-        Map<QName, JavaModel> map = CastUtils.cast((Map<?, ?>)penv.get(WSDLToJavaProcessor.MODEL_MAP));
+        Map<QName, JavaModel> map = CastUtils.cast((Map<?, ?>)penv.get(WSDLToRustProcessor.MODEL_MAP));
         for (JavaModel javaModel : map.values()) {
 
             Map<String, JavaInterface> interfaces = javaModel.getInterfaces();

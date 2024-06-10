@@ -41,7 +41,7 @@ import org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.internal.annotator
 import org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.internal.annotator.WebServiceAnnotator;
 import org.apache.cxf.tools.wsdlto.frontend.reqwest.processor.internal.annotator.XmlSeeAlsoAnnotator;
 
-public class WSDLToJavaProcessor extends WSDLToProcessor implements ClassNameProcessor {
+public class WSDLToRustProcessor extends WSDLToProcessor implements ClassNameProcessor {
     public static final String MODEL_MAP = WSDLToProcessor.class.getName()
         + ".MODEL_MAP";
 
