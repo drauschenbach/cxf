@@ -18,8 +18,8 @@ specific language governing permissions and limitations
 under the License.
 -->
 <plugin xmlns="http://cxf.apache.org/tools/plugin" name="tools-reqwest-frontend" version="2.0" provider="apache cxf">
-    <frontend name="jaxws" package="org.apache.cxf.tools.wsdlto.frontend.reqwest" profile="ReqwestProfile">
-        <container name="ReqwestContainer" toolspec="jaxws-toolspec.xml"/>
+    <frontend name="reqwest" package="org.apache.cxf.tools.wsdlto.frontend.reqwest" profile="ReqwestProfile">
+        <container name="ReqwestContainer" toolspec="reqwest-toolspec.xml"/>
         <processor name="WSDLToRustProcessor" package="org.apache.cxf.tools.wsdlto.frontend.reqwest.processor"/>
         <builder name="ReqwestDefinitionBuilder" package="org.apache.cxf.tools.wsdlto.frontend.reqwest.wsdl11"/>
         <generators package="org.apache.cxf.tools.wsdlto.frontend.reqwest.generators">
